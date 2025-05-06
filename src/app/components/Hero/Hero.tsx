@@ -4,9 +4,9 @@ import imageHero from "../../../../public/trainer-3-Photoroom.png";
 import { Button } from "@/components/ui/button";
 export function Hero() {
   return (
-    <div className="pt-10 relative md:pt-0  bg-[url(/bg-padel-5.jpg)] bg-no-repeat bg-cover bg">
+    <div className=" relative md:pt-0  bg-[url(/bg-padel-5.jpg)] bg-no-repeat bg-cover bg">
       <div className="absolute inset-0 bg-black/84 w-full h-full"></div>
-      <section className="relative grid mx-auto max-w-7xl space-y-8 px-6 md:grid-cols-2 md:space-y-16">
+      <section className="relative grid mx-auto max-w-7xl space-y-8 px-6 md:px-0 md:grid-cols-2 md:space-y-16">
         <div className=" flex flex-col  items-center justify-center md:items-start">
           <h1 className="font-extrabold text-5xl md:text-8xl text-white tracking-wider">
             Transform Challenges into Triumphs!
@@ -27,7 +27,7 @@ export function Hero() {
           <Image
             src={imageHero}
             alt="imageHero"
-            width={950}
+            width={1050}
             height={900}
             className="relative z-10"
             style={{

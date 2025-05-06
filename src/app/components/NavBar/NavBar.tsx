@@ -34,7 +34,7 @@ export function Header1() {
   const [isOpen, setOpen] = useState(false);
   return (
     <header className="w-full  bg-[#1F1F1F]">
-      <div className="container relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
+      <div className=" max-w-7xl relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
         <div className="justify-start items-center gap-4 lg:flex hidden flex-row">
           <NavigationMenu className="flex justify-start items-start">
             <NavigationMenuList className="flex justify-start gap-4 flex-row text-white">

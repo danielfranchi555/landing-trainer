@@ -1,9 +1,13 @@
+import { About } from "./components/About/About";
 import { Hero } from "./components/Hero/Hero";
+import { Questions } from "./components/Questions/Questions";
 
 export default function Home() {
   return (
-    <div>
+    <main className="bg-[#1A1A1A] grid gap-20">
       <Hero />
-    </div>
+      <About />
+      <Questions />
+    </main>
   );
 }
