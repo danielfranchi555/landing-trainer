@@ -9,8 +9,8 @@ export const Header1 = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <nav className="bg-[#1F1F1F] px-6 py-6 md:px-0 ">
-        <div className="hidden text-white md:flex items-center mx-auto max-w-7xl justify-between ">
+      <nav className="bg-[#1F1F1F] px-6 py-6 md:px-0">
+        <div className="hidden text-white md:flex items-center mx-auto max-w-7xl justify-between">
           <div className="flex items-center gap-4">
             <p className="text-3xl font-bold">MartinChaig</p>
           </div>
@@ -23,12 +23,20 @@ export const Header1 = () => {
                 <Link href="/about">About me</Link>
               </li>
             </ul>
-            <Button className="bg-green-500">Contact me</Button>
+            <Button className="bg-blue-500 cursor-pointer hover:bg-blue-400">
+              Contact me
+            </Button>
           </div>
         </div>
+
+        {/* Mobile View */}
         <div className="flex items-center justify-between md:hidden">
           <p className="text-white text-2xl">MartinChaig</p>
-          <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
+          <Button
+            variant="ghost"
+            onClick={() => setOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
             {isOpen ? (
               <X size={40} color="white" className="w-10 h-10" />
             ) : (
@@ -37,11 +45,19 @@ export const Header1 = () => {
           </Button>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="bg-white px-6 grid gap-2 py-4">
-          <Link href={"/"}>Home</Link>
-          <Link href={"/about"}>About me</Link>
-          <Button className="bg-green-500">Contact me</Button>
+        <div className="bg-white px-6 grid gap-2 py-4 md:hidden">
+          <Link href="/" onClick={() => setOpen(false)}>
+            Home
+          </Link>
+          <Link href="/about" onClick={() => setOpen(false)}>
+            About me
+          </Link>
+          <Button className="bg-blue-500" onClick={() => setOpen(false)}>
+            Contact me
+          </Button>
         </div>
       )}
     </>
