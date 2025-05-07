@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import imageHero from "../../../../public/trainer-3-Photoroom.png";
 import { Button } from "@/components/ui/button";
+import imageHero from "../../../../public/hero-nino-2.png";
+
 export function Hero() {
   return (
-    <div className=" relative md:pt-0  bg-[url(/bg-padel-5.jpg)] bg-no-repeat bg-cover bg">
-      <div className="absolute inset-0 bg-black/84 w-full h-full"></div>
-      <section className="relative grid mx-auto max-w-7xl space-y-8 px-6 md:px-0 md:grid-cols-2 md:space-y-16">
+    <div className=" relative md:pt-0  bg-[url(/bg-padel-5.jpg)] bg-left bg-no-repeat bg-cover bg">
+      <div className=" absolute inset-0 bg-black/84 w-full h-full"></div>
+      <section className="pt-20 relative grid mx-auto max-w-7xl space-y-8 px-6 md:px-0 md:grid-cols-2 md:space-y-16">
         <div className=" flex flex-col  items-center justify-center md:items-start">
           <h1 className="font-extrabold text-5xl md:text-8xl text-white tracking-wider">
             Transform Challenges into Triumphs!
@@ -16,12 +17,12 @@ export function Hero() {
             individuals to achieve their fitness goals through personalized
             coaching and support.{" "}
           </p>
-          <Button className="bg-[#FF2332] mt-6 max-w-max text-2xl cursor-pointer">
+          <Button className="bg-[#235BFF] mt-6 py-6  max-w-max text-2xl cursor-pointer z-10 hover:bg-blue-500">
             Get started
           </Button>
         </div>
         {/* Imagen principal */}
-        <div className="relative w-full max-w-[950px]">
+        <div className="relative w-full">
           {/* SVG de fondo */}
           {/* Imagen principal encima */}
           <Image

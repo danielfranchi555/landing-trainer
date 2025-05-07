@@ -1,107 +1,49 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { Menu, MoveRight, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 
-export function Header1() {
-  const navigationItems = [
-    {
-      title: "Personal Trainer",
-      href: "/",
-      description: "",
-    },
-    {
-      title: "Contacto",
-      href: "/",
-      description: "",
-    },
-    {
-      title: "Acerca de",
-      href: "/",
-      description: "",
-    },
-  ];
-
+export const Header1 = () => {
   const [isOpen, setOpen] = useState(false);
   return (
-    <header className="w-full  bg-[#1F1F1F]">
-      <div className=" max-w-7xl relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
-        <div className="justify-start items-center gap-4 lg:flex hidden flex-row">
-          <NavigationMenu className="flex justify-start items-start">
-            <NavigationMenuList className="flex justify-start gap-4 flex-row text-white">
-              <h1>PersonalTrainer</h1>
-              {navigationItems.map((item) => (
-                <NavigationMenuItem key={item.title}>
-                  {item.href ? (
-                    <>
-                      <NavigationMenuLink>
-                        <Button variant="ghost">{item.title}</Button>
-                      </NavigationMenuLink>
-                    </>
-                  ) : (
-                    <>
-                      <NavigationMenuTrigger className="font-medium text-sm">
-                        {item.title}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent className="!w-[450px] p-4">
-                        <div className="flex flex-col lg:grid grid-cols-2 gap-4">
-                          <div className="flex flex-col h-full justify-between">
-                            <div className="flex flex-col">
-                              <p className="text-base">{item.title}</p>
-                              <p className="text-muted-foreground text-sm">
-                                {item.description}
-                              </p>
-                            </div>
-                            <Button size="sm" className="mt-10">
-                              Book a call today
-                            </Button>
-                          </div>
-                        </div>
-                      </NavigationMenuContent>
-                    </>
-                  )}
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+    <>
+      <nav className="bg-[#1F1F1F] px-6 py-6 md:px-0 ">
+        <div className="hidden text-white md:flex items-center mx-auto max-w-7xl justify-between ">
+          <div className="flex items-center gap-4">
+            <p className="text-3xl font-bold">MartinChaig</p>
+          </div>
+          <div className="flex items-center gap-4">
+            <ul className="flex items-center gap-4">
+              <li className="hover:border-b-2 border-transparent hover:border-blue-500 pb-1 transition-all duration-200 hover:text-blue-500">
+                <Link href="/">Home</Link>
+              </li>
+              <li className="hover:border-b-2 border-transparent hover:border-blue-500 pb-1 transition-all duration-200 hover:text-blue-500">
+                <Link href="/about">About me</Link>
+              </li>
+            </ul>
+            <Button className="bg-green-500">Contact me</Button>
+          </div>
         </div>
-        <div className="flex  w-full  shrink lg:hidden items-center justify-between ">
-          Home
+        <div className="flex items-center justify-between md:hidden">
+          <p className="text-white text-2xl">MartinChaig</p>
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? (
+              <X size={40} color="white" className="w-10 h-10" />
+            ) : (
+              <Menu size={30} color="white" />
+            )}
           </Button>
-          {isOpen && (
-            <div className="absolute top-20 border-t flex flex-col w-full right-0 bg-background shadow-lg py-4 container gap-8">
-              {navigationItems.map((item) => (
-                <div key={item.title}>
-                  <div className="flex flex-col gap-2">
-                    {item.href ? (
-                      <Link
-                        href={item.href}
-                        className="flex justify-between items-center"
-                      >
-                        <span className="text-lg">{item.title}</span>
-                        <MoveRight className="w-4 h-4 stroke-1 text-muted-foreground" />
-                      </Link>
-                    ) : (
-                      <p className="text-lg">{item.title}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
-      </div>
-    </header>
+      </nav>
+      {isOpen && (
+        <div className="bg-white px-6 grid gap-2 py-4">
+          <Link href={"/"}>Home</Link>
+          <Link href={"/about"}>About me</Link>
+          <Button className="bg-green-500">Contact me</Button>
+        </div>
+      )}
+    </>
   );
-}
+};

@@ -18,19 +18,19 @@ export const About = () => {
         </div>
         <div className="grid gap-2 md:grid-cols-3">
           <div className="bg-[#1F1F1F] flex flex-col gap-1 items-center justify-center p-4 rounded-md shadow-xl">
-            <span className="text-red-500 font-bold text-3xl md:text-5xl">
+            <span className="text-[#235BFF] font-bold text-3xl md:text-5xl">
               2000+
             </span>
             <p className="text-[#909090]">Satisfied Clients</p>
           </div>
           <div className="bg-[#1F1F1F] flex flex-col gap-1 items-center justify-center p-4 rounded-md shadow-xl">
-            <span className="text-red-500 font-bold text-3xl md:text-5xl">
+            <span className="text-[#235BFF] font-bold text-3xl md:text-5xl">
               10
             </span>
             <p className="text-[#909090]">Years of Experience</p>
           </div>
           <div className="bg-[#1F1F1F] flex flex-col gap-1 items-center justify-center p-4 rounded-md shadow-xl">
-            <span className="text-red-500 font-bold text-3xl md:text-5xl">
+            <span className="text-[#235BFF] font-bold text-3xl md:text-5xl">
               15
             </span>
             <p className="text-[#909090]">Years in Sport</p>
