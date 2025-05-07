@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -44,7 +45,7 @@ export function Hero() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="z-10"
           >
-            <Button className="bg-[#235BFF] mt-6 py-6 max-w-max text-2xl cursor-pointer z-10 hover:bg-blue-500 ">
+            <Button className="bg-[#235BFF] mt-6 py-6 max-w-max text-2xl cursor-pointer z-10 hover:bg-blue-500">
               Get started
             </Button>
           </motion.div>
@@ -56,6 +57,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
+          layout="position" // Asegura un layout fluido y sin saltos
         >
           <Image
             src={imageHero}
@@ -66,6 +68,7 @@ export function Hero() {
             style={{
               maskImage: "linear-gradient(black 90%, transparent)",
             }}
+            priority // Optimiza la carga de la imagen
           />
         </motion.div>
       </section>
