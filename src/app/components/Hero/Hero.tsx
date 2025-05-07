@@ -25,18 +25,17 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Transform Challenges into Triumphs!
+            Impara il Padel con un Esperto.
           </motion.h1>
 
           <motion.p
-            className="text-white/90 mt-4"
+            className="text-white/90 mt-4 text-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            As a passionate personal trainer, I believe in empowering
-            individuals to achieve their fitness goals through personalized
-            coaching and support.
+            Con molti anni nel mondo del padel, ho imparato come ottenere il
+            meglio da ogni giocatore e massimizzare il suo potenziale in campo
           </motion.p>
 
           <motion.div
@@ -46,7 +45,7 @@ export function Hero() {
             className="z-10"
           >
             <Button className="bg-[#235BFF] mt-6 py-6 max-w-max text-2xl cursor-pointer z-10 hover:bg-blue-500">
-              Get started
+              Inizia subito{" "}
             </Button>
           </motion.div>
         </motion.div>

@@ -20,11 +20,11 @@ export const Header1 = () => {
                 <Link href="/">Home</Link>
               </li>
               <li className="hover:border-b-2 border-transparent hover:border-blue-500 pb-1 transition-all duration-200 hover:text-blue-500">
-                <Link href="/about">About me</Link>
+                <Link href="/about">Chi sono</Link>
               </li>
             </ul>
             <Button className="bg-blue-500 cursor-pointer hover:bg-blue-400">
-              Contact me
+              Contattami
             </Button>
           </div>
         </div>
@@ -53,10 +53,10 @@ export const Header1 = () => {
             Home
           </Link>
           <Link href="/about" onClick={() => setOpen(false)}>
-            About me
+            Chi sono
           </Link>
           <Button className="bg-blue-500" onClick={() => setOpen(false)}>
-            Contact me
+            Contattami
           </Button>
         </div>
       )}
