@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 import testimonialOne from "../../../../public/testimonials-1.png";
 import svg from "../../../../public/svgTestomials.svg";
-// import elipse from "../../../../public/elipse.svg";
+// import elipse from "../../../../public/elipse.svg";x
 
 export const Testimonial = () => {
   return (
