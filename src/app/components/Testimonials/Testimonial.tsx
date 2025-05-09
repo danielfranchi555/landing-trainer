@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Carousel,
   CarouselContent,
@@ -8,108 +10,85 @@ import {
 import Image from "next/image";
 import testimonialOne from "../../../../public/testimonials-1.png";
 import svg from "../../../../public/svgTestomials.svg";
-// import elipse from "../../../../public/elipse.svg";x
 
 export const Testimonial = () => {
   return (
-    <div className="w-full bg-[url(/elipse.svg)] bg-center py-60">
-      <div className=" mx-auto max-w-6xl">
-        <Carousel>
+    <div className="w-full bg-[url(/elipse.svg)] bg-no-repeat bg-cover py-20 px-4">
+      <div className="max-w-6xl mx-auto w-full">
+        <Carousel className="w-full relative overflow-visible">
+          {/* Flechas para desktop (a los lados) */}
+          <CarouselPrevious className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-10" />
+          <CarouselNext className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-10" />
+
           <CarouselContent>
             <CarouselItem>
-              {/* flex justify-between gap-4 h-full  w-full  border md:grid bg-red-500 */}
-              <div className=" flex flex-col  md:flex-row md:w-full md:h-full md:gap-10 ">
-                <div className="w-full md:w-[700px] flex items-center justify-center  ">
-                  <div className=" relative flex flex-col gap-4  p-10 bg-[#1F1F1F]">
-                    <p className="text-1xl md:text-3xl text-white">
-                      I ve never felt stronger! John pushed me to my limits
+              <div className="flex flex-col md:flex-row gap-8 items-center w-full">
+                <div className="w-full md:w-1/2 flex justify-center">
+                  <div className="relative bg-[#1F1F1F] p-6 md:p-10 w-full max-w-md rounded-md">
+                    <p className="text-base md:text-2xl text-white">
+                      I've never felt stronger! John pushed me to my limits
                       while providing the support I needed to succeed. Highly
                       recommended!
                     </p>
-                    <p className="text-[#909090] text-1 xl">Daniele Debbians</p>
+                    <p className="text-[#909090] text-sm md:text-lg mt-4">
+                      Daniele Debbians
+                    </p>
                     <Image
-                      className="absolute top-[-30px] "
+                      className="absolute top-[-30px] left-4"
                       src={svg}
                       alt="svg"
                       width={50}
-                      height={100}
+                      height={50}
                     />
                   </div>
                 </div>
-                <div className="">
+                <div className="w-full md:w-1/2 flex justify-center">
                   <Image
                     src={testimonialOne}
-                    alt="test-1"
-                    width={500}
-                    height={100}
-                    className="w-full md:w-[500px]"
+                    alt="testimonial"
+                    className="w-full max-w-sm md:max-w-md object-contain rounded-md"
                   />
                 </div>
               </div>
             </CarouselItem>
+
             <CarouselItem>
-              <div className=" flex flex-col  md:flex-row md:w-full md:h-full md:gap-10 ">
-                <div className="w-full md:w-[700px] flex items-center justify-center  ">
-                  <div className=" relative flex flex-col gap-4  p-10 bg-[#1F1F1F]">
-                    <p className="text-1xl md:text-3xl text-white">
-                      I ve never felt stronger! John pushed me to my limits
+              <div className="flex flex-col md:flex-row gap-8 items-center w-full">
+                <div className="w-full md:w-1/2 flex justify-center">
+                  <div className="relative bg-[#1F1F1F] p-6 md:p-10 w-full max-w-md rounded-md">
+                    <p className="text-base md:text-2xl text-white">
+                      I've never felt stronger! John pushed me to my limits
                       while providing the support I needed to succeed. Highly
                       recommended!
                     </p>
-                    <p className="text-[#909090] text-1 xl">Daniele Debbians</p>
-                    <Image
-                      className="absolute top-[-30px] "
-                      src={svg}
-                      alt="svg"
-                      width={50}
-                      height={100}
-                    />
-                  </div>
-                </div>
-                <div className="">
-                  <Image
-                    src={testimonialOne}
-                    alt="test-1"
-                    width={500}
-                    height={100}
-                    className="w-full md:w-[500px]"
-                  />
-                </div>
-              </div>
-            </CarouselItem>
-            <CarouselItem>
-              <div className=" flex flex-col  md:flex-row md:w-full md:h-full md:gap-10 ">
-                <div className="w-full md:w-[700px] flex items-center justify-center  ">
-                  <div className=" relative flex flex-col gap-4  p-10 bg-[#1F1F1F]">
-                    <p className="text-1xl md:text-3xl text-white">
-                      I ve never felt stronger! John pushed me to my limits
-                      while providing the support I needed to succeed. Highly
-                      recommended!
+                    <p className="text-[#909090] text-sm md:text-lg mt-4">
+                      Daniele Debbians
                     </p>
-                    <p className="text-[#909090] text-1 xl">Daniele Debbians</p>
                     <Image
-                      className="absolute top-[-30px] "
+                      className="absolute top-[-30px] left-4"
                       src={svg}
                       alt="svg"
                       width={50}
-                      height={100}
+                      height={50}
                     />
                   </div>
                 </div>
-                <div className="">
+                <div className="w-full md:w-1/2 flex justify-center">
                   <Image
                     src={testimonialOne}
-                    alt="test-1"
-                    width={500}
-                    height={100}
-                    className="w-full md:w-[500px]"
+                    alt="testimonial"
+                    className="w-full max-w-sm md:max-w-md object-contain rounded-md"
                   />
                 </div>
               </div>
             </CarouselItem>
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+
+          {/* Flechas debajo en mobile */}
+          <div className="flex justify-center items-center gap-4 mt-6 md:hidden">
+            <CarouselPrevious className="static translate-x-0 translate-y-0 relative" />
+            <CarouselNext className="static translate-x-0 translate-y-0 relative" />
+          </div>
         </Carousel>
       </div>
     </div>

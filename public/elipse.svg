@@ -1,5 +1,5 @@
 <svg width="1204" height="1337" viewBox="0 0 1204 1337" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.4" filter="url(#filter0_f_1_1486)">
+<g opacity="0.2" filter="url(#filter0_f_1_1486)">
 <circle cx="535.5" cy="668.5" r="268.5" fill="#4D94FF"/>
 </g>
 <defs>
@@ -11,18 +11,4 @@
 </defs>
 </svg>
 
-<!-- <svg width="1204" height="1337" viewBox="0 0 1204 1337" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g opacity="0.2" filter="url(#filter0_f_1_1486)">
-    <circle cx="535.5" cy="668.5" r="268.5" fill="#007BFF"/>
-  </g>
-  <defs>
-    <filter id="filter0_f_1_1486" x="-133" y="0" width="1337" height="1337" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_1_1486"/>
-      <feComponentTransfer in="SourceAlpha">
-        <feFuncA type="table" tableValues="1 0.9" />
-      </feComponentTransfer>
-    </filter>
-  </defs>
-</svg> -->
+

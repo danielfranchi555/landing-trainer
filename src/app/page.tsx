@@ -5,10 +5,10 @@ import { Testimonial } from "./components/Testimonials/Testimonial";
 
 export default function Home() {
   return (
-    <main className="bg-[#1A1A1A] grid gap-20">
+    <main className="bg-[#1A1A1A] grid gap-20 ">
       <Hero />
       <About />
-      <Questions />
+      {/* <Questions /> */}
       <Testimonial />
     </main>
   );
