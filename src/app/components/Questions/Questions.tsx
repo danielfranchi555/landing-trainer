@@ -7,14 +7,14 @@ import {
 
 export const Questions = () => {
   return (
-    <div className="w-full md:w-[800px] mx-auto bg-red-500  grid gap-4 mt-10 text-center md:px-0">
-      <h3 className="font-bold text-5xl text-white">
+    <div className="w-full px-6 md: max-w-7xl mx-auto   grid gap-4 mt-10 text-center md:px-0">
+      <h3 className="font-bold text-3xl md:text-5xl text-white">
         Commonly Asked Questions
       </h3>
       <span className="text-[#909090]">I am here to help!</span>
       <Accordion className="text-white w-full" type="single" collapsible>
         <AccordionItem value="item-1">
-          <AccordionTrigger className="text-2xl font-bold">
+          <AccordionTrigger className="text-1xl md:text-2xl font-bold">
             ¿Necesito tener experiencia previa para empezar a jugar al pádel?
           </AccordionTrigger>
           <AccordionContent className="text-[#909090] text-base text-left">
@@ -25,7 +25,7 @@ export const Questions = () => {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger className="text-2xl font-bold">
+          <AccordionTrigger className="text-1xl md:text-2xl font-bold">
             ¿Ofrecés clases para niños o principiantes?
           </AccordionTrigger>
           <AccordionContent className="text-[#909090] text-base text-left">
@@ -36,7 +36,7 @@ export const Questions = () => {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger className="text-2xl font-bold">
+          <AccordionTrigger className="text-1xl md:text-2xl font-bold">
             ¿Ofrecés entrenamiento para jugadores competitivos?
           </AccordionTrigger>
           <AccordionContent className="text-[#909090] text-base text-left">
@@ -47,7 +47,7 @@ export const Questions = () => {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
-          <AccordionTrigger className="text-2xl font-bold">
+          <AccordionTrigger className="text-1xl md:text-2xl font-bold">
             ¿Cómo reservo una clase?
           </AccordionTrigger>
           <AccordionContent className="text-[#909090] text-base text-left">
