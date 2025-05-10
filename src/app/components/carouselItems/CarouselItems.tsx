@@ -46,7 +46,7 @@ const duplicatedCards = [...cards, ...cards];
 
 export default function CarouselItems() {
   const controls = useAnimation();
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const container = containerRef.current;
