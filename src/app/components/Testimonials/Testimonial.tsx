@@ -12,7 +12,7 @@ import svg from "../../../../public/svgTestomials.svg";
 
 export const Testimonial = () => {
   return (
-    <div className="w-full mt-50 bg-[url(/elipse.svg)]  bg-no-repeat bg-cover bg-center  py-50 px-4">
+    <div className="w-full mt-30 bg-[url(/elipse.svg)]  bg-no-repeat bg-cover bg-center  py-50 px-4">
       <div className="max-w-6xl mx-auto w-full">
         <Carousel className="w-full relative  overflow-visible">
           {/* Flechas para desktop (a los lados) */}

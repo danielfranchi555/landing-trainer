@@ -10,8 +10,8 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.2,
+      staggerChildren: 0.4, // aumenta el espacio entre animaciones
+      delayChildren: 0.3, // pequeño delay antes de iniciar
     },
   },
 };
@@ -21,7 +21,16 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 1, ease: "easeInOut" }, // duración más larga y easing suave
+  },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1.2, ease: "easeInOut", delay: 0.8 }, // retraso para que aparezca después del texto
   },
 };
 
@@ -68,10 +77,10 @@ export function Hero() {
         {/* Imagen animada con animación independiente */}
         <motion.div
           className="relative w-full"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          variants={imageVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 1, ease: "easeOut" }}
           layout="position"
         >
           <Image
