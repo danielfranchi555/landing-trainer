@@ -68,7 +68,7 @@ export default function CarouselItems() {
   }, [controls]);
 
   return (
-    <div className="w-full overflow-hidden rounded-xl py-5 ">
+    <div className="w-full overflow-hidden rounded-xl py-20 ">
       <motion.div
         ref={containerRef}
         animate={controls}

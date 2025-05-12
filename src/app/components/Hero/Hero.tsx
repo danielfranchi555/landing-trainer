@@ -6,9 +6,28 @@ import { Button } from "@/components/ui/button";
 import imageHero from "../../../../public/hero-nino-2.png";
 import { motion } from "framer-motion";
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
 export function Hero() {
   return (
-    <div className="relative md:pt-0 isolate bg-[url(/bg-padel-5.jpg)] bg-right bg-no-repeat bg-cover">
+    <div className="relative pt-10 md:pt-0 isolate bg-[url(/bg-padel-5.jpg)] bg-right bg-no-repeat bg-cover">
       {/* SVG de fondo - bien atrás y al inicio */}
       <div className="absolute inset-0 bg-[url('/bg-svg.svg')] bg-no-repeat bg-cover bg-center z-[10]" />
 
@@ -16,50 +35,43 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/84 w-full h-full z-0" />
 
       <section className="pt-20 relative grid mx-auto max-w-7xl space-y-8 px-6 md:px-0 md:grid-cols-2 md:space-y-16 z-10">
-        {/* Texto principal animado */}
+        {/* Contenedor principal animado con stagger */}
         <motion.div
           className="flex flex-col items-center justify-center md:items-start"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h1
             className="font-extrabold text-5xl md:text-8xl text-white tracking-wider"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+            variants={itemVariants}
           >
             Impara il Padel con un Esperto.
           </motion.h1>
 
           <motion.p
             className="text-white/90 mt-4 text-2xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            variants={itemVariants}
           >
             Con molti anni nel mondo del padel, ho imparato come ottenere il
             meglio da ogni giocatore e massimizzare il suo potenziale in campo
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="z-10"
-          >
-            <Button className="bg-[#235BFF] mt-6 py-6 max-w-max text-2xl cursor-pointer z-10 hover:bg-blue-500">
+          <motion.div variants={itemVariants} className="z-10">
+            <Button className="bg-gradient-to-r from-blue-500 to-blue-400 mt-6 py-6 max-w-max text-2xl cursor-pointer z-10 ">
               Inizia subito
             </Button>
           </motion.div>
         </motion.div>
 
-        {/* Imagen animada */}
+        {/* Imagen animada con animación independiente */}
         <motion.div
           className="relative w-full"
           initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 1, ease: "easeOut" }}
           layout="position"
         >
           <Image

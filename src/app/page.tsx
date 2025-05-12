@@ -4,6 +4,7 @@ import CarouselItems from "./components/carouselItems/CarouselItems";
 import { Hero } from "./components/Hero/Hero";
 import { Questions } from "./components/Questions/Questions";
 import { Testimonial } from "./components/Testimonials/Testimonial";
+import WhatsappButton from "./components/WhatsappButton/WhatsappButton";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Questions />
       <Testimonial />
       <Footer />
+      <WhatsappButton />
     </main>
   );
 }
