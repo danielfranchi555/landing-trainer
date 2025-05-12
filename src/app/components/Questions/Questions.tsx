@@ -27,27 +27,27 @@ const questions = [
   {
     value: "item-1",
     question:
-      "¿Necesito tener experiencia previa para empezar a jugar al pádel?",
+      "¿È necessaria esperienza precedente per iniziare a giocare a padel?",
     answer:
-      "No, no es necesario. Las clases están pensadas tanto para quienes nunca jugaron como para quienes ya tienen experiencia. Adaptamos el entrenamiento a tu nivel para que puedas aprender y disfrutar desde el primer día.",
+      "No, non è necessario. Le lezioni sono pensate sia per chi non ha mai giocato che per chi ha già esperienza. Adattiamo l'allenamento al tuo livello in modo che tu possa imparare e divertirti fin dal primo giorno.",
   },
   {
     value: "item-2",
-    question: "¿Ofrecés clases para niños o principiantes?",
+    question: "¿Offri lezioni per bambini o principianti?",
     answer:
-      "Sí, claro. Hay clases diseñadas específicamente para niños, adolescentes y adultos principiantes. El enfoque es divertido, didáctico y progresivo, para que cada alumno aprenda a su ritmo y con confianza.",
+      "Sì, certo. Ci sono lezioni specificamente pensate per bambini, adolescenti e adulti principianti. L'approccio è divertente, didattico e progressivo, affinché ogni allievo possa imparare al proprio ritmo e con fiducia.",
   },
   {
     value: "item-3",
-    question: "¿Ofrecés entrenamiento para jugadores competitivos?",
+    question: "¿Offri allenamenti per giocatori competitivi?",
     answer:
-      "Sí. Si ya jugás en torneos o querés empezar a competir, hay entrenamientos técnicos, tácticos y físicos orientados a mejorar el rendimiento en cancha. También se trabaja en situaciones reales de partido y análisis de juego.",
+      "Sì. Se già partecipi a tornei o vuoi iniziare a competere, ci sono allenamenti tecnici, tattici e fisici mirati a migliorare le prestazioni in campo. Si lavora anche su situazioni reali di partita e analisi del gioco.",
   },
   {
     value: "item-4",
-    question: "¿Cómo reservo una clase?",
+    question: "¿Come posso prenotare una lezione?",
     answer:
-      "Podés reservar tu clase por WhatsApp, completando el formulario de contacto en esta página o escribiéndome por Instagram. ¡Coordinamos día, horario y tipo de clase según tus preferencias!",
+      "Puoi prenotare la tua lezione tramite WhatsApp, compilando il modulo di contatto su questa pagina o scrivendomi su Instagram. Coordiniamo il giorno, l'orario e il tipo di lezione in base alle tue preferenze!",
   },
 ];
 
@@ -67,7 +67,7 @@ export const Questions = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        Commonly Asked Questions
+        Domande Frequenti
       </motion.h3>
       <motion.span
         className="text-[#909090]"
@@ -76,7 +76,7 @@ export const Questions = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        I am here to help!
+        Sono qui per aiutarti!
       </motion.span>
       <Accordion type="single" collapsible>
         {questions.map(({ value, question, answer }) => {

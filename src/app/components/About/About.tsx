@@ -132,7 +132,7 @@ export const About = () => {
             ref={ref10}
           >
             <span className="text-[#235BFF] font-bold text-3xl md:text-5xl">
-              <AnimatedNumber target={10} startAnimation={inView10} />
+              <AnimatedNumber target={8} startAnimation={inView10} />
             </span>
             <p className="text-[#909090]">Anni di esperienza</p>
           </motion.div>

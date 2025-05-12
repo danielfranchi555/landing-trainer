@@ -10,7 +10,7 @@ import { CallToAction } from "./components/CallToAction/CallToAction";
 
 export default function Home() {
   return (
-    <main className="bg-[#090707] grid gap-0 ">
+    <main className="bg-[#090707] grid gap-0 overflow-hidden ">
       <Hero />
       <CarouselItems />
       <About />

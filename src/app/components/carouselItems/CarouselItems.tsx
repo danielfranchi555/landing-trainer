@@ -69,6 +69,9 @@ export default function CarouselItems() {
 
   return (
     <div className="w-full overflow-hidden rounded-xl py-20 ">
+      <div className=" px-6 text-[25px] md:px-0 max-w-7xl mx-auto w-full text-4xl font-bold mb-10">
+        <h3 className="text-white">Servizi di Allenamento di Padel</h3>
+      </div>
       <motion.div
         ref={containerRef}
         animate={controls}
