@@ -47,7 +47,11 @@ export const Header1 = () => {
           controls.start({
             y: 0,
             opacity: 1,
-            transition: { duration: 0.2, ease: "easeInOut", type: "tween" },
+            transition: {
+              duration: 0.4,
+              ease: "easeInOut",
+              type: "tween",
+            },
           });
           setHidden(false);
         }
