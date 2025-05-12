@@ -8,10 +8,14 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <div className="relative md:pt-0 bg-[url(/bg-padel-5.jpg)] bg-right bg-no-repeat bg-cover">
-      <div className="absolute inset-0 bg-black/84 w-full h-full" />
+    <div className="relative md:pt-0 isolate bg-[url(/bg-padel-5.jpg)] bg-right bg-no-repeat bg-cover">
+      {/* SVG de fondo - bien atrás y al inicio */}
+      <div className="absolute inset-0 bg-[url('/bg-svg.svg')] bg-no-repeat bg-cover bg-center z-[10]" />
 
-      <section className="pt-20 relative grid mx-auto max-w-7xl space-y-8 px-6 md:px-0 md:grid-cols-2 md:space-y-16">
+      {/* Capa negra semi-transparente encima del fondo */}
+      <div className="absolute inset-0 bg-black/84 w-full h-full z-0" />
+
+      <section className="pt-20 relative grid mx-auto max-w-7xl space-y-8 px-6 md:px-0 md:grid-cols-2 md:space-y-16 z-10">
         {/* Texto principal animado */}
         <motion.div
           className="flex flex-col items-center justify-center md:items-start"
@@ -45,7 +49,7 @@ export function Hero() {
             className="z-10"
           >
             <Button className="bg-[#235BFF] mt-6 py-6 max-w-max text-2xl cursor-pointer z-10 hover:bg-blue-500">
-              Inizia subito{" "}
+              Inizia subito
             </Button>
           </motion.div>
         </motion.div>
@@ -56,24 +60,24 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          layout="position" // Asegura un layout fluido y sin saltos
+          layout="position"
         >
           <Image
             src={imageHero}
             alt="imageHero"
             width={1050}
             height={900}
-            className="relative z-10"
+            className="relative z-20"
             style={{
               maskImage: "linear-gradient(black 90%, transparent)",
             }}
-            priority // Optimiza la carga de la imagen
+            priority
           />
         </motion.div>
       </section>
 
-      <div className="absolute inset-0 bg-[url('/bg-svg.svg')] bg-no-repeat bg-cover bg-center z-0" />
-      <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-b from-transparent to-black/80" />
+      {/* Degradado inferior */}
+      <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-b from-transparent to-black/80 z-10" />
     </div>
   );
 }
