@@ -30,7 +30,7 @@ const imageVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1.2, ease: "easeInOut", delay: 0.8 }, // retraso para que aparezca después del texto
+    transition: { duration: 0.5, ease: "easeInOut", delay: 0.8 }, // retraso para que aparezca después del texto
   },
 };
 
