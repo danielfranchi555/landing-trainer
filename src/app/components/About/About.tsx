@@ -119,7 +119,7 @@ export const About = () => {
           >
             <span className="text-[#235BFF] font-bold text-3xl md:text-5xl">
               <AnimatedNumber
-                target={100}
+                target={50}
                 suffix=" +"
                 startAnimation={inView100}
               />
