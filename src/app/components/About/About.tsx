@@ -82,6 +82,7 @@ export const About = () => {
 
   return (
     <motion.div
+      id="about"
       className="mt-20 mx-auto max-w-7xl px-6 grid gap-10 md:grid-cols-2 md:px-0"
       variants={containerVariants}
       initial="hidden"

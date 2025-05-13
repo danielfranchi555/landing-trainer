@@ -53,20 +53,19 @@ export function Hero() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h1
-            className="font-extrabold text-5xl md:text-7xl text-white tracking-wider"
+            className="font-extrabold text-3xl text-center md:text-left md:text-7xl text-white tracking-wider"
             variants={itemVariants}
           >
             Lezioni di Padel con Istruttore Esperto{" "}
           </motion.h1>
 
           <motion.p
-            className="text-white/90 mt-4 text-1xl"
+            className="text-white/90 mt-4 text-center text-1xl md:text-2xl md:text-left"
             variants={itemVariants}
           >
-            Con più di 8 anni di esperienza nell insegnamento del padel, offro
-            lezioni personalizzate per giocatori di tutti i livelli. Attualmente
-            tengo lezioni in Italia, aiutando ogni allievo a migliorare la sua
-            tecnica, strategia e a raggiungere il massimo rendimento in campo
+            Oltre 8 anni di esperienza nell insegnamento del padel. Lezioni
+            personalizzate per tutti i livelli, lavoro in Italia per migliorare
+            tecnica, strategia e rendimento in campo.
           </motion.p>
 
           <motion.div variants={itemVariants} className="z-10">

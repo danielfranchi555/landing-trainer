@@ -1,29 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useActionState } from "react";
 import { motion } from "framer-motion";
+import { handleSubmit } from "./actions";
 
 export default function Contact() {
-  const [form, setForm] = useState({ email: "" });
-  const [success, setSuccess] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
-
-    if (res.ok) {
-      setSuccess(true);
-      setForm({ email: "" });
-    }
-  };
+  const [state, formAction, isPending] = useActionState(handleSubmit, {
+    success: false,
+  });
 
   const containerVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -46,37 +29,42 @@ export default function Contact() {
       viewport={{ once: true, amount: 0.5 }}
     >
       <h2 className="text-white text-3xl md:text-4xl font-bold text-center">
-        Aprende pádel conmigo y mejora tu juego rápido
+        Impara il padel con me e migliora il tuo gioco velocemente.
       </h2>
       <p className="text-white text-center max-w-xl px-2 md:px-0">
-        Escríbeme y te ayudaré a diseñar un plan de entrenamiento adaptado a ti.
+        Scrivimi e ti aiuterò a progettare un piano di allenamento
+        personalizzato per te.
       </p>
       <form
-        onSubmit={handleSubmit}
-        className="bg-white rounded-md flex flex-col md:flex-row items-center gap-4 w-full max-w-lg p-4 shadow-md"
+        action={formAction}
+        className="bg-white rounded-md flex flex-col items-center gap-4 w-full max-w-lg p-4 shadow-md"
       >
-        <input
-          type="email"
-          name="email"
-          className="flex-grow w-full px-4 py-3 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#097FD9]"
-          placeholder="Enter your email address"
-          onChange={handleChange}
-          value={form.email}
-          required
-          aria-label="Email address"
-        />
-        <button
-          type="submit"
-          className="bg-[#090707] text-white px-6 py-3 rounded-md w-full md:w-auto hover:bg-gray-800 transition-colors"
-        >
-          Enviar
-        </button>
+        <div className="flex flex-col gap-6 w-full md:flex-row">
+          <input
+            type="email"
+            name="email"
+            className="flex-grow w-full px-4 py-3 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#097FD9]"
+            placeholder="Inserisci il tuo indirizzo email."
+            required
+            aria-label="Email address"
+          />
+          <button
+            type="submit"
+            className="bg-[#090707] text-white px-6 py-3 rounded-md w-full md:w-auto hover:bg-gray-800 transition-colors"
+          >
+            {isPending ? "Invio in corso..." : "Invia"}
+          </button>
+        </div>
+        {state.success && (
+          <p className="text-green-600 mt-2">
+            Messaggio inviato con successo ✅
+          </p>
+        )}
+
+        {!state.success && state.error && (
+          <p className="text-red-600 mt-2">{state.error}</p>
+        )}
       </form>
-      {success && (
-        <p role="alert" className="text-green-600 text-center mt-2 font-medium">
-          Mensaje enviado correctamente
-        </p>
-      )}
     </motion.div>
   );
 }

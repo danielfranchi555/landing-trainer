@@ -16,7 +16,9 @@ export default function Home() {
       <About />
       <Questions />
       <CallToAction />
-      <Testimonial />
+      <div className="bg-[url(/Testimonial-bg.svg)] bg-no-repeat py-10  mt-40 ">
+        <Testimonial />
+      </div>
       <Contact />
       <Footer />
       <WhatsappButton />

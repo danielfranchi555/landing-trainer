@@ -8,7 +8,7 @@ import { motion, AnimatePresence, useAnimation } from "framer-motion";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "Chi sono" },
+  { href: "#about", label: "Chi sono", isAnchor: true },
 ];
 
 export const Header1 = () => {
@@ -17,7 +17,6 @@ export const Header1 = () => {
   const lastScrollY = useRef(0);
   const [hidden, setHidden] = useState(false);
 
-  // Inicializar navbar visible al montar
   useEffect(() => {
     controls.start({
       y: 0,
@@ -26,7 +25,6 @@ export const Header1 = () => {
     });
   }, [controls]);
 
-  // Detectar scroll para ocultar/mostrar navbar con animación suave
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -64,6 +62,14 @@ export const Header1 = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [controls, hidden]);
 
+  // Función para scroll suave a id
+  const handleScrollTo = (id: string) => {
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <motion.nav
@@ -98,25 +104,56 @@ export const Header1 = () => {
           <ul className="flex items-center gap-8">
             {navLinks.map((link) => (
               <motion.li key={link.href} className="relative">
-                <Link href={link.href} passHref>
-                  <motion.span
+                {link.isAnchor ? (
+                  <a
+                    href={link.href}
                     className="relative px-2 py-1 text-lg text-white cursor-pointer"
-                    whileHover={{ scale: 1.1, color: "#3b82f6" }}
-                    transition={{ type: "spring", stiffness: 150, damping: 20 }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleScrollTo(link.href);
+                    }}
                   >
-                    {link.label}
                     <motion.span
-                      className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 rounded origin-left"
-                      initial={{ scaleX: 0 }}
-                      whileHover={{ scaleX: 1 }}
-                      transition={{ duration: 0.4, ease: "easeInOut" }}
-                    />
-                  </motion.span>
-                </Link>
+                      whileHover={{ scale: 1.1, color: "#3b82f6" }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 150,
+                        damping: 20,
+                      }}
+                    >
+                      {link.label}
+                      <motion.span
+                        className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 rounded origin-left"
+                        initial={{ scaleX: 0 }}
+                        whileHover={{ scaleX: 1 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                      />
+                    </motion.span>
+                  </a>
+                ) : (
+                  <Link href={link.href} passHref>
+                    <motion.span
+                      className="relative px-2 py-1 text-lg text-white cursor-pointer"
+                      whileHover={{ scale: 1.1, color: "#3b82f6" }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 150,
+                        damping: 20,
+                      }}
+                    >
+                      {link.label}
+                      <motion.span
+                        className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 rounded origin-left"
+                        initial={{ scaleX: 0 }}
+                        whileHover={{ scaleX: 1 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                      />
+                    </motion.span>
+                  </Link>
+                )}
               </motion.li>
             ))}
           </ul>
-
           {/* Botón CTA con animación hover */}
           <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
             <Button className="ml-8 bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow transition-all duration-200">
