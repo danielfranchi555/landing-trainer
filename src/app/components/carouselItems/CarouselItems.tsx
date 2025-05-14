@@ -9,34 +9,33 @@ import { FaRunning } from "react-icons/fa";
 const cards = [
   {
     id: 1,
-    title: "Clases para Principiantes",
-    description:
-      "Aprendé las bases del pádel desde cero con técnica y diversión.",
+    title: "Lezioni per Principianti",
+    description: "Impara le basi del padel da zero con tecnica e divertimento.",
     icon: <GiTennisRacket size={50} />,
   },
   {
     id: 2,
-    title: "Entrenamiento Avanzado",
+    title: "Allenamento Avanzato",
     description:
-      "Perfeccioná tu táctica, velocidad y posicionamiento en pista.",
+      "Perfeziona la tua tattica, velocità e posizionamento in campo.",
     icon: <GiTennisRacket size={50} />,
   },
   {
     id: 3,
-    title: "Clases para Niños",
-    description: "Formación lúdica y segura para los más pequeños.",
+    title: "Lezioni per Bambini",
+    description: "Formazione ludica e sicura per i più piccoli.",
     icon: <GiTennisCourt size={50} />,
   },
   {
     id: 4,
-    title: "Clases en Pareja",
-    description: "Coordinación y estrategia para jugar en equipo.",
+    title: "Lezioni di Coppia",
+    description: "Coordinazione e strategia per giocare in squadra.",
     icon: <HiOutlineUsers size={50} />,
   },
   {
     id: 5,
-    title: "Preparación Física",
-    description: "Mejorá tu estado físico adaptado al pádel.",
+    title: "Preparazione Fisica",
+    description: "Migliora la tua forma fisica adattata al padel.",
     icon: <FaRunning size={50} />,
   },
 ];
