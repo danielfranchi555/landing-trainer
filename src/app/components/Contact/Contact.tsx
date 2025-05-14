@@ -32,14 +32,22 @@ export default function Contact() {
         Impara il padel con me e migliora il tuo gioco velocemente.
       </h2>
       <p className="text-white text-center max-w-xl px-2 md:px-0">
-        Scrivimi e ti aiuterò a progettare un piano di allenamento
-        personalizzato per te.
+        Parlami del tuo livello o degli obiettivi che hai. Ti risponderò al più
+        presto
       </p>
       <form
         action={formAction}
         className="bg-white rounded-md flex flex-col items-center gap-4 w-full max-w-lg p-4 shadow-md"
       >
-        <div className="flex flex-col gap-6 w-full md:flex-row">
+        <div className="flex flex-col gap-6 w-full md:flex-col">
+          <input
+            type="text"
+            name="name"
+            className="flex-grow w-full px-4 py-3 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#097FD9]"
+            placeholder="Inserisci il tuo nome"
+            required
+            aria-label="Email address"
+          />
           <input
             type="email"
             name="email"
@@ -56,13 +64,23 @@ export default function Contact() {
           </button>
         </div>
         {state.success && (
-          <p className="text-green-600 mt-2">
+          <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-green-600 mt-2"
+          >
             Messaggio inviato con successo ✅
-          </p>
+          </motion.p>
         )}
 
         {!state.success && state.error && (
-          <p className="text-red-600 mt-2">{state.error}</p>
+          <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-green-600 mt-2"
+          >
+            Messaggio inviato con successo ✅
+          </motion.p>
         )}
       </form>
     </motion.div>

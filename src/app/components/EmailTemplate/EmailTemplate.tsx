@@ -1,28 +1,41 @@
 interface EmailTemplateProps {
-  email: string;
+  name: string;
 }
 
-export const EmailTemplate = ({ email }: EmailTemplateProps) => (
+export const EmailTemplate = ({ name }: EmailTemplateProps) => (
   <div
     style={{ fontFamily: "Arial, sans-serif", lineHeight: 1.5, color: "#333" }}
   >
     <h2 style={{ color: "#1c1c1c" }}>Grazie per il tuo interesse!</h2>
 
-    <p>Ciao {email},</p>
-
-    <p>Grazie per aver lasciato la tua email. Ti contatterò molto presto.</p>
+    <p>Ciao {name},</p>
 
     <p>
-      Se vuoi fissare una lezione o hai qualche domanda, presto riceverai
-      notizie tramite questo canale.
+      Grazie per aver lasciato il tuo indirizzo email. Ti contatterò molto
+      presto.
     </p>
 
-    <p>Grazie per il tuo interesse e ci vediamo in campo! 🎾</p>
+    <p>
+      Nel frattempo, puoi seguirmi su Instagram per rimanere aggiornato su
+      tornei e novità che pubblico regolarmente dal club dove tengo le lezioni:
+    </p>
+
+    <p>
+      👉{" "}
+      <a
+        href="https://www.instagram.com/cdm_worldpadelclub/"
+        style={{ color: "#097FD9" }}
+      >
+        @cdm_worldpadelclub
+      </a>
+    </p>
+
+    <p>Ci vediamo presto in campo! 🎾</p>
 
     <p style={{ marginTop: "24px" }}>
       Cordiali saluti,
       <br />
-      <strong>Maestro di Padel</strong>
+      <strong>Istruttore di Padel</strong>
     </p>
   </div>
 );
