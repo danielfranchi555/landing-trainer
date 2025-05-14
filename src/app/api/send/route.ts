@@ -10,8 +10,9 @@ export async function POST(req: Request) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "Martin Chaig <noreply@martinchaig.com>",
       to: email,
+      bcc: "franchidaniel76@gmail.com", // destinatario en copia oculta
       subject: "Hello world",
       react: EmailTemplate({ email: email }),
     });
