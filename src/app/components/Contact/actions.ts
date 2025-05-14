@@ -10,6 +10,8 @@ export async function handleSubmit(
   payload: FormData
 ): Promise<FormState> {
   try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
     const email = payload.get("email");
     if (
       typeof email !== "string" ||
@@ -21,7 +23,7 @@ export async function handleSubmit(
       };
     }
 
-    const resp = await fetch(`http://localhost:3000/api/send`, {
+    const resp = await fetch(`${baseUrl}/api/send`, {
       method: "POST",
       body: JSON.stringify({ email }),
       headers: {
