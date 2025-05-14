@@ -1,9 +1,9 @@
 import { About } from "./components/About/About";
 import CarouselItems from "./components/carouselItems/CarouselItems";
-import { Hero } from "./components/Hero/Hero";
 import { Questions } from "./components/Questions/Questions";
 import { CallToAction } from "./components/CallToAction/CallToAction";
 import dynamic from "next/dynamic";
+import Hero from "./components/Hero/Hero";
 
 const Testimonial = dynamic(
   () => import("./components/Testimonials/Testimonial")

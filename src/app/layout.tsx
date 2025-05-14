@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header1 } from "./components/NavBar/NavBar";
-import { Oxanium, Outfit } from "next/font/google";
+import { Urbanist } from "next/font/google";
 
-const oxanium = Oxanium({
-  subsets: ["latin"],
-  weight: ["300", "400", "700", "800"], // ← agregá "800"
-  variable: "--font-oxanium",
-});
-const outfit = Outfit({
+const urbanist = Urbanist({
   subsets: ["latin"],
   weight: ["300", "400", "700", "800"],
   variable: "--font-outfit", // ← nombre distinto
@@ -59,9 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${outfit.variable} ${oxanium.variable} font-outfit antialiased`}
-      >
+      <body className={`${urbanist.variable}  font-outfit antialiased`}>
         <Header1 />
         {children}
       </body>
