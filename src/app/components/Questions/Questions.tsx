@@ -59,7 +59,7 @@ export const Questions = () => {
   };
 
   return (
-    <div className="w-full px-6 md:max-w-7xl mx-auto grid gap-4 mt-60 text-center md:px-0">
+    <div className="w-full max-w-7xl px-4 sm:px-6 md:px-8 mx-auto grid gap-4 mt-60 text-center">
       <motion.h3
         className="font-bold text-3xl md:text-5xl text-white"
         variants={fadeUpVariants}

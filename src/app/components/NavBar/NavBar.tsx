@@ -177,18 +177,17 @@ export const Header1 = () => {
           >
             MartinChaig
           </Link>
-          <Button
-            variant="ghost"
+          <button
             onClick={() => setOpen(!isOpen)}
             aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
             className="focus:outline-none"
           >
             {isOpen ? (
-              <X size={36} color="white" />
+              <X size={25} color="white" />
             ) : (
-              <Menu size={32} color="white" />
+              <Menu size={25} color="white" />
             )}
-          </Button>
+          </button>
         </motion.div>
       </motion.nav>
 

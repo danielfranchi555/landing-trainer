@@ -42,11 +42,14 @@ export default function MotionText() {
       className="grid md:grid-cols-2 items-center md:items-center gap-8"
     >
       {/* Texto y botón con animación escalonada */}
-      <motion.div variants={itemVariants} className="flex flex-col gap-4">
-        <h1 className="font-extrabold text-3xl md:text-7xl text-white tracking-wider text-center md:text-left">
+      <motion.div
+        variants={itemVariants}
+        className="flex flex-col items-center md:items-start gap-4"
+      >
+        <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white tracking-wider text-center md:text-left">
           Lezioni di Padel con Istruttore Esperto
         </h1>
-        <p className="text-white/90 mt-4 text-1xl md:text-2xl text-center md:text-left">
+        <p className="text-white/90 mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-center md:text-left">
           Oltre 8 anni di esperienza nell insegnamento del padel in Italia.
           Lezioni personalizzate per tutti i livelli per migliorare tecnica,
           strategia e rendimento in campo.
@@ -59,12 +62,13 @@ export default function MotionText() {
       {/* Imagen con animación solo de fade-in */}
       <motion.div
         variants={imageVariants}
-        className="relative w-full h-[500px] md:h-[780px] flex items-end"
+        className=" w-full  flex items-center justify-center border "
       >
         <Image
           src={imageHero}
           alt="Martin Chaig insegnando padel"
-          fill
+          // fill
+          // width={500}
           className="object-cover z-20"
           priority
           style={{ maskImage: "linear-gradient(black 90%, transparent)" }}
