@@ -1,12 +1,18 @@
 import { About } from "./components/About/About";
-import Footer from "./components/Footer/Footer";
 import CarouselItems from "./components/carouselItems/CarouselItems";
 import { Hero } from "./components/Hero/Hero";
 import { Questions } from "./components/Questions/Questions";
-import { Testimonial } from "./components/Testimonials/Testimonial";
-import WhatsappButton from "./components/WhatsappButton/WhatsappButton";
-import Contact from "./components/Contact/Contact";
 import { CallToAction } from "./components/CallToAction/CallToAction";
+import dynamic from "next/dynamic";
+
+const Testimonial = dynamic(
+  () => import("./components/Testimonials/Testimonial")
+);
+const Contact = dynamic(() => import("./components/Contact/Contact"));
+const Footer = dynamic(() => import("./components/Footer/Footer"));
+const WhatsappButton = dynamic(
+  () => import("./components/WhatsappButton/WhatsappButton")
+);
 
 export default function Home() {
   return (

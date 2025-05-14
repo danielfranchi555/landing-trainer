@@ -91,7 +91,13 @@ export const About = () => {
     >
       {/* Imagen animada */}
       <motion.div variants={fadeUpVariants}>
-        <Image src={imageAbout} alt="image-about" width={500} height={400} />
+        <Image
+          src={imageAbout}
+          alt="image-about"
+          width={500}
+          height={400}
+          loading="lazy"
+        />
       </motion.div>
 
       {/* Texto y estadísticas animadas */}

@@ -58,7 +58,7 @@ const textImageVariants = {
   },
 };
 
-export const Testimonial = () => {
+export default function Testimonial() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto w-full gap-8 px-4 py-8">
       {/* Texto e imagen lateral con animación al entrar en viewport */}
@@ -79,6 +79,7 @@ export const Testimonial = () => {
             width={100}
             height={100}
             className="w-20 h-20 md:w-[100px] md:h-[100px]"
+            loading="lazy"
           />
           <p className="text-base md:text-lg">50+ Studenti soddisfatti</p>
         </div>
@@ -108,6 +109,7 @@ export const Testimonial = () => {
                             width={25}
                             height={25}
                             alt="icon-star"
+                            loading="lazy"
                           />
                         ))}
                       </div>
@@ -139,4 +141,4 @@ export const Testimonial = () => {
       </div>
     </div>
   );
-};
+}
