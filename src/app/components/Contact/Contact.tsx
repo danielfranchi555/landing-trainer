@@ -22,6 +22,7 @@ export default function Contact() {
 
   return (
     <motion.div
+      id="contact"
       className="bg-gradient-to-r from-blue-500 to-blue-400 rounded-md flex flex-col items-center w-full p-6 md:max-w-7xl mx-auto gap-4 mt-60 text-center md:px-0 mb-40"
       variants={containerVariants}
       initial="hidden"

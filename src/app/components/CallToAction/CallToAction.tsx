@@ -29,9 +29,15 @@ export const CallToAction = () => {
         al livello successivo.
       </p>
       <div className="flex items-start  h-full justify-end">
-        <Button className="bg-gradient-to-r h-full text-[19px] cursor-pointer from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-500">
-          Prenota ora
-        </Button>
+        <a
+          href="https://wa.me/5493510000000?text=Buongiorno%2C%20vorrei%20prenotare%20una%20lezione%20di%20padel"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="bg-gradient-to-r h-full text-[25px] cursor-pointer from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-500">
+            Prenota ora
+          </Button>
+        </a>
       </div>
     </motion.div>
   );

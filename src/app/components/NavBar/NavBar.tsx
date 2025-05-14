@@ -6,10 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "#about", label: "Chi sono", isAnchor: true },
-];
+const navLinks = [{ href: "#about", label: "Chi sono", isAnchor: true }];
 
 export const Header1 = () => {
   const [isOpen, setOpen] = useState(false);
@@ -131,7 +128,7 @@ export const Header1 = () => {
                     </motion.span>
                   </a>
                 ) : (
-                  <Link href={link.href} passHref>
+                  <a href={link.href}>
                     <motion.span
                       className="relative px-2 py-1 text-lg text-white cursor-pointer"
                       whileHover={{ scale: 1.1, color: "#3b82f6" }}
@@ -149,16 +146,18 @@ export const Header1 = () => {
                         transition={{ duration: 0.4, ease: "easeInOut" }}
                       />
                     </motion.span>
-                  </Link>
+                  </a>
                 )}
               </motion.li>
             ))}
           </ul>
           {/* Botón CTA con animación hover */}
           <motion.div whileHover={{ scale: 1.05 }} className="inline-block">
-            <Button className="ml-8 bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow transition-all duration-200">
-              Contattami
-            </Button>
+            <a href="#contact">
+              <Button className="ml-8 bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow transition-all duration-200">
+                Contattami
+              </Button>
+            </a>
           </motion.div>
         </motion.div>
 

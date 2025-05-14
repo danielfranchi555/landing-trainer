@@ -14,7 +14,6 @@ import persons from "../../../../public/persons.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// Array de testimonios
 const testimonials = [
   {
     name: "Luca Bianchi",
@@ -34,7 +33,6 @@ const testimonials = [
   },
 ];
 
-// Variants para animaciones suaves y escaladas
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.95, y: 20 },
   visible: {
@@ -113,7 +111,7 @@ export default function Testimonial() {
                           />
                         ))}
                       </div>
-                      <p className="text-white text-sm md:text-base text-center">
+                      <p className="text-white text-sm md:text-base text-start">
                         “{testimonial.text}”
                       </p>
                       <div className="flex w-full gap-4 items-center">

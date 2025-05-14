@@ -54,15 +54,17 @@ export default function MotionText() {
           Lezioni personalizzate per tutti i livelli per migliorare tecnica,
           strategia e rendimento in campo.
         </p>
-        <Button className="cursor-pointer max-w-max p-8 text-2xl bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-500">
-          Inizia Subito
-        </Button>
+        <a href="#contact">
+          <Button className="cursor-pointer max-w-max p-8 text-2xl bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-500">
+            Inizia Subito
+          </Button>
+        </a>
       </motion.div>
 
       {/* Imagen con animación solo de fade-in */}
       <motion.div
         variants={imageVariants}
-        className=" w-full  flex items-center justify-center border "
+        className=" w-full  flex items-center justify-center  "
       >
         <Image
           src={imageHero}
