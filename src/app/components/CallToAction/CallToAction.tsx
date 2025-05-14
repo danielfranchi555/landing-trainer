@@ -25,12 +25,12 @@ export const CallToAction = () => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <p className="font-bold text-base md:text-3xl ">
-        Reserva tu clase personalizada ahora y lleva tu juego de pádel al
-        siguiente nivel.
+        Prenota ora la tua lezione personalizzata e porta il tuo gioco di padel
+        al livello successivo.
       </p>
       <div className="flex items-start  h-full justify-end">
         <Button className="bg-gradient-to-r h-full text-[19px] cursor-pointer from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-500">
-          Reservar Ahora
+          Prenota ora
         </Button>
       </div>
     </motion.div>
