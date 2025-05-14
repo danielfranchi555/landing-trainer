@@ -92,16 +92,16 @@ export default function CarouselItems() {
       flex 
       flex-col 
       text-left
-      w-[90vw]      /* móvil: casi todo el ancho */
-      sm:w-60       /* sm: 15rem = 240px aprox */
-      md:w-64       /* md: 16rem = 256px */
-      lg:w-72       /* lg: 18rem = 288px */
+      w-[90vw]      
+      sm:w-60       
+      md:w-64       
+      lg:w-72       
     "
           >
             <div className="mb-4 text-[#097FD9] group-hover:text-white font-bold text-4xl flex w-full">
               {icon}
             </div>
-            <h3 className="text-white font-bold text-lg md:text-xl min-h-[3.5rem] leading-normal">
+            <h3 className="text-white font-bold text-2xl md:text-xl min-h-[3.5rem] leading-normal">
               {title}
             </h3>
             <p className="text-white text-sm mt-2">{description}</p>

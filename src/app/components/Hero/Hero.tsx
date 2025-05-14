@@ -36,7 +36,7 @@ const imageVariants = {
 
 export function Hero() {
   return (
-    <div className="relative pt-10 md:pt-0 isolate bg-[url(/bg-padel-5.jpg)] bg-right bg-no-repeat bg-cover">
+    <div className="relative pt-10 md:pt-20 isolate bg-[url(/bg-padel-5.jpg)] bg-right bg-no-repeat bg-cover">
       {/* SVG de fondo - bien atrás y al inicio */}
       <div className="absolute inset-0 bg-[url('/bg-svg.svg')] bg-no-repeat bg-cover bg-center z-[10]" />
 
@@ -77,19 +77,17 @@ export function Hero() {
 
         {/* Imagen animada con animación independiente */}
         <motion.div
-          className="relative w-full"
+          className="relative w-full h-[500px] md:h-[780px] flex items-end"
           variants={imageVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          layout="position"
         >
           <Image
             src={imageHero}
-            alt="imageHero"
-            width={1050}
-            height={900}
-            className="relative z-20"
+            alt="Martin Chaig insegnando padel"
+            fill
+            className="object-cover z-20"
             style={{
               maskImage: "linear-gradient(black 90%, transparent)",
             }}
