@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "@/components/ui/button";
-import imageHero from "../../../../public/hero-nino-2.png";
+import imageHero from "../../../../public/image-optimazed.png";
 import { motion } from "framer-motion";
 
 const containerVariants = {
