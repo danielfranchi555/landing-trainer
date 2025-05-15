@@ -30,7 +30,7 @@ export const CallToAction = () => {
       </p>
       <div className="flex items-start  h-full justify-end">
         <a
-          href="https://wa.me/5493510000000?text=Buongiorno%2C%20vorrei%20prenotare%20una%20lezione%20di%20padel"
+          href="https://wa.me/393388221103?text=Buongiorno%2C%20vorrei%20prenotare%20una%20lezione%20di%20padel"
           target="_blank"
           rel="noopener noreferrer"
         >
