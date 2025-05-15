@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   creator: "Martin Chaig",
   metadataBase: new URL("https://www.martinchaig.com"),
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.svg",
   },
   openGraph: {
     title:
