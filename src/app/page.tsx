@@ -21,7 +21,9 @@ export default function Home() {
       <CarouselItems />
       <About />
       <Questions />
-      <CallToAction />
+      <div className="md:px-6">
+        <CallToAction />
+      </div>
       <div className="bg-[url(/Testimonial-bg.svg)] bg-no-repeat py-10  mt-40 ">
         <Testimonial />
       </div>

@@ -83,7 +83,7 @@ export const About = () => {
   return (
     <motion.div
       id="about"
-      className="mt-20 mx-auto max-w-7xl px-6 grid gap-10 md:grid-cols-2 md:px-0"
+      className="mt-20 mx-auto max-w-7xl grid gap-10 px-6 md:grid-cols-2 md:px-6 xl:px-0 "
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -94,9 +94,10 @@ export const About = () => {
         <Image
           src={imageAbout}
           alt="image-about"
-          width={500}
-          height={400}
+          width={700}
+          height={700}
           loading="lazy"
+          className="w-full h-full"
         />
       </motion.div>
 
@@ -106,7 +107,9 @@ export const About = () => {
         variants={containerVariants}
       >
         <motion.div variants={fadeUpVariants}>
-          <h2 className="text-4xl text-white md:text-7xl">Chi è Nino?</h2>
+          <h2 className="text-3xl  text-white md:text-5xl xl:text-7xl">
+            Chi è Nino?
+          </h2>
           <p className="text-[#909090] text-2xl mt-4">
             Come allenatore di padel appassionato, credo nell aiutare i
             giocatori a raggiungere i loro obiettivi migliorando la loro tecnica

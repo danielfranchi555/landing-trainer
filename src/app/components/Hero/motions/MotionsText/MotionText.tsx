@@ -1,4 +1,3 @@
-// MotionText.jsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -39,37 +38,45 @@ export default function MotionText() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="grid md:grid-cols-2 items-center md:items-center gap-8"
+      className="grid md:grid-cols-2 items-center md:items-center gap-6 md:px-0"
     >
       <motion.div
-        variants={itemVariants}
-        className="flex flex-col items-center md:items-start gap-4"
+        variants={containerVariants}
+        className="flex flex-col items-center md:items-start gap-4 md:gap-6"
       >
-        <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white tracking-wider text-center md:text-left">
+        <motion.h1
+          variants={itemVariants}
+          className="font-extrabold  text-4xl sm:text-4xl md:text-4xl lg:text-6xl xl:text-7xl text-white text-center md:text-left"
+        >
           Lezioni di Padel con Istruttore Esperto
-        </h1>
-        <p className="text-white/90 mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-center md:text-left">
+        </motion.h1>
+
+        <motion.p
+          variants={itemVariants}
+          className="text-white/90  sm:text-lg md:text-[14px] lg:text-[20px] text-center md:text-left"
+        >
           Oltre 8 anni di esperienza nell insegnamento del padel in Italia.
           Lezioni personalizzate per tutti i livelli per migliorare tecnica,
-          strategia e rendimento in campo.
-        </p>
-        <a href="#contact">
-          <Button className="cursor-pointer max-w-max p-8 text-2xl bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-500">
-            Inizia Subito
-          </Button>
-        </a>
+          strategia e rendimento in campo
+        </motion.p>
+
+        <motion.div variants={itemVariants} className="">
+          <a href="#contact">
+            <Button className="cursor-pointer max-w-max p-6 md:p-6 text-2xl bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-400 hover:to-blue-500">
+              Inizia Subito
+            </Button>
+          </a>
+        </motion.div>
       </motion.div>
 
       <motion.div
         variants={imageVariants}
-        className="relative z-20 w-full flex items-center justify-center"
+        className="relative z-20 w-full h-full flex items-center justify-center"
       >
         <Image
           src={imageHero}
           alt="Martin Chaig insegnando padel"
-          width={600}
-          height={600}
-          className="object-cover"
+          className="w-full h-full object-cover"
           priority
         />
       </motion.div>
