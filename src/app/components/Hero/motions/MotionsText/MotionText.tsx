@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import imageHero from "../../../../../../public/image-optimazed.png";
+import imageHero from "../../../../../../public/image-hero.png";
 import { Button } from "@/components/ui/button";
 
 const containerVariants = {
@@ -69,8 +69,8 @@ export default function MotionText() {
         <Image
           src={imageHero}
           alt="Martin Chaig insegnando padel"
-          // fill
-          // width={500}
+          width={600}
+          height={600}
           className="object-cover z-20"
           priority
           style={{ maskImage: "linear-gradient(black 90%, transparent)" }}
