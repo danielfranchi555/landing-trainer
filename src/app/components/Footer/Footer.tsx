@@ -1,22 +1,21 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-6">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+    <footer className="bg-[#1F1F1F] text-white py-5">
+      <div className="container mx-auto px-4 text-center grid gap-2">
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Tu Empresa. Todos los derechos
-          reservados.
+          &copy; {new Date().getFullYear()} Martín Chaig - Profesor de Pádel
         </p>
-        <div className="flex space-x-4 mt-4 md:mt-0">
-          <a href="/privacy" className="hover:underline">
-            Política de Privacidad
+        <p className="text-sm">
+          Developed by{" "}
+          <a
+            className="text-blue-400 hover:text-blue-500 transition-colors"
+            href="https://www.linkedin.com/in/danielfranchijs/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            danielfranchi
           </a>
-          <a href="/terms" className="hover:underline">
-            Términos y Condiciones
-          </a>
-          <a href="/contact" className="hover:underline">
-            Contacto
-          </a>
-        </div>
+        </p>
       </div>
     </footer>
   );
