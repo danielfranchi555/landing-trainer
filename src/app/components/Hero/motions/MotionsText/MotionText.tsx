@@ -1,3 +1,4 @@
+// MotionText.jsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -9,8 +10,8 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.4, // tiempo entre animaciones de hijos (texto y botón)
-      delayChildren: 0.3, // retraso inicial
+      staggerChildren: 0.4,
+      delayChildren: 0.3,
     },
   },
 };
@@ -24,12 +25,11 @@ const itemVariants = {
   },
 };
 
-// Variantes solo para la imagen: fade-in sin movimiento vertical
 const imageVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 1, ease: "easeInOut", delay: 0.7 }, // delay para que inicie después del texto
+    transition: { duration: 1, ease: "easeInOut", delay: 0.7 },
   },
 };
 
@@ -41,7 +41,6 @@ export default function MotionText() {
       animate="visible"
       className="grid md:grid-cols-2 items-center md:items-center gap-8"
     >
-      {/* Texto y botón con animación escalonada */}
       <motion.div
         variants={itemVariants}
         className="flex flex-col items-center md:items-start gap-4"
@@ -61,19 +60,17 @@ export default function MotionText() {
         </a>
       </motion.div>
 
-      {/* Imagen con animación solo de fade-in */}
       <motion.div
         variants={imageVariants}
-        className=" w-full  flex items-center justify-center  "
+        className="relative z-20 w-full flex items-center justify-center"
       >
         <Image
           src={imageHero}
           alt="Martin Chaig insegnando padel"
           width={600}
           height={600}
-          className="object-cover z-20"
+          className="object-cover"
           priority
-          style={{ maskImage: "linear-gradient(black 90%, transparent)" }}
         />
       </motion.div>
     </motion.div>
