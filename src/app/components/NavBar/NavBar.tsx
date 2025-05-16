@@ -70,7 +70,7 @@ export const Header1 = () => {
   return (
     <>
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:px-0"
+        className="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:px-6 xl:px-0"
         aria-label="Main navigation"
         initial={{ y: -120, opacity: 0 }}
         animate={controls}
