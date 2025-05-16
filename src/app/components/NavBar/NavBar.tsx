@@ -236,12 +236,14 @@ export const Header1 = () => {
                   closed: { opacity: 0, y: 20 },
                 }}
               >
-                <Button
-                  className="w-full bg-gradient-to-r from-blue-500 to-blue-400 text-white font-semibold px-6 py-2 rounded-lg shadow hover:from-blue-400 hover:to-blue-500"
-                  onClick={() => setOpen(false)}
-                >
-                  Contattami
-                </Button>
+                <a href="#contact">
+                  <Button
+                    className="w-full border bg-gradient-to-r from-blue-500 to-blue-400 text-white font-semibold px-6  rounded-lg shadow hover:from-blue-400 hover:to-blue-500"
+                    onClick={() => setOpen(false)}
+                  >
+                    Contattami
+                  </Button>
+                </a>
               </motion.li>
             </motion.ul>
           </motion.div>
