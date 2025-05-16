@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-[#1F1F1F]gi text-white py-5">
       <div className="container mx-auto px-4 text-center grid gap-2">
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Martín Chaig - Profesor de Pádel
+          &copy; {new Date().getFullYear()} Martín Chaig - Istruttore di Padel
         </p>
         <p className="text-sm">
           Developed by{" "}
