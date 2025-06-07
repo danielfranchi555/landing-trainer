@@ -2,12 +2,12 @@
 import { useActionState } from "react";
 import { motion } from "framer-motion";
 import { handleSubmit } from "./actions";
+import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   const [state, formAction, isPending] = useActionState(handleSubmit, {
     success: false,
   });
-
   const containerVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -19,6 +19,8 @@ export default function Contact() {
       },
     },
   };
+
+  console.log("isPending:", isPending, typeof isPending);
 
   return (
     <motion.div
@@ -57,12 +59,13 @@ export default function Contact() {
             required
             aria-label="Email address"
           />
-          <button
+          <Button
             type="submit"
-            className="bg-[#090707] text-white px-6 py-3 rounded-md w-full md:w-auto hover:bg-gray-800 transition-colors"
+            disabled={isPending}
+            className="bg-[#090707] text-white px-6 py-4 rounded-md w-full md:w-auto hover:bg-gray-800 transition-colors"
           >
             {isPending ? "Invio in corso..." : "Invia"}
-          </button>
+          </Button>
         </div>
         {state.success && (
           <motion.p
