@@ -3,6 +3,7 @@ import { useActionState } from "react";
 import { motion } from "framer-motion";
 import { handleSubmit } from "./actions";
 import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
 
 export default function Contact() {
   const [state, formAction, isPending] = useActionState(handleSubmit, {
@@ -62,8 +63,9 @@ export default function Contact() {
           <Button
             type="submit"
             disabled={isPending}
-            className="bg-[#090707] text-white px-6 py-4 rounded-md w-full md:w-auto hover:bg-gray-800 transition-colors"
+            className="bg-[#090707] text-white px-6 py-4 rounded-md w-full md:w-auto hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
           >
+            {isPending && <Loader2 className="w-4 h-4 animate-spin" />}
             {isPending ? "Invio in corso..." : "Invia"}
           </Button>
         </div>
