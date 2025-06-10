@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/image-optimazed.png",
+        url: "https://res.cloudinary.com/dcotr8wpa/image/upload/v1749582372/image-seo_spr2yr.jpg",
         width: 1200,
         height: 630,
         alt: "Martin Chaig mentre tiene una lezione di padel",
